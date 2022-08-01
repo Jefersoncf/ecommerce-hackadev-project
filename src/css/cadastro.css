@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f7fa;
+  height: 100vh;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+span {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+hr {
+  height: 2px;
+  background-color: #cfd8dc;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.data-personal {
+  grid-area: data-personal;
+}
+
+.address {
+  grid-area: address;
+}
+
+.form {
+  grid-area: form;
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "data-personal address";
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: end;
+  width: 0;
+}
+
+.container {
+  display: grid;
+  width: 95%;
+  margin: 0 auto;
+  grid-template-columns: 100%;
+  grid-template-rows: 150px 600px 150px;
+  grid-template-areas: "header" "form" "footer";
+}
+
+.container-card {
+  border-top: 3px solid #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 0px rgba(50, 50, 50, 0.22);
+  padding: 30px;
+  margin: 10px;
+  transition: all 0.3s ease-out;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 30% 45% 20%;
+  column-gap: 5%;
+}
+
+label {
+  display: flex;
+  padding-left: 10px;
+  justify-content: end;
+}
+
+.input-user {
+  padding: 10px;
+  border-radius: 3px;
+  height: 30px;
+  border: 1px solid #cfd8dc;
+  width: 100%;
+}
+
+select {
+  padding-left: 20px;
+  border-radius: 3px;
+  height: 30px;
+  border: 1px solid #cfd8dc;
+  background-color: white;
+  width: 80%;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
+}
+
+.btn {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  height: 40px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: medium;
+}
+
+.btn-vd {
+  border-color: #087705;
+  background: #087705;
+  color: #fff;
+}
+
+.btn-vd:hover {
+  background: linear-gradient(to bottom, #68b465 5%, #abd5aa 100%);
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "form" "footer";
+  }
+
+  .form {
+    grid-template-columns: 100%;
+    grid-template-areas: "data-personal" "address";
+  }
+
+  .footer {
+    display: flex;
+    justify-content: end;
+    width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    justify-items: center;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .form {
+    grid-template-columns: 100%;
+    grid-template-areas: "data-personal" "address";
+  }
+}

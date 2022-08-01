@@ -1,86 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/cart.css" />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-    <title> E-commerce | Carrinho </title>   
-    <link rel="stylesheet" href="css/style2.css">
-</head>
+  <body>
+    <!-- Header -->
+    <div class="navigation">
+      <div class="nav-center container d-flex">
+        <a href="home.html" class="logo"><h1>Dev</>Modas</h1></a>
+        <ul class="nav-list d-flex">
+          <li class="nav-item">
+            <a href="home.html" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">T&C</a>
+          </li>
+          <li class="icons d-flex">
+            <a href="#" class="icon">
+              <i class="bx bx-user"></i>
+            </a>
+            <div class="icon">
+              <i class="bx bx-search"></i>
+            </div>
+            <a href="carrinho.html" class="icon">
+              <i class="bx bx-shopping-bag"></i>
+              <span class="d-flex">0</span>
+            </a>
+          </li>
+        </ul>
 
-<body>
-    <main class="container">
-        <section class="pesquisa-produtos">
-            <i class="fa-solid fa-arrow-left"> </i>
-            <h2 id="texto"> Sacola (4) </h2>
-        </section>
-        <div class="itens">
-            <div class="div-itens1"> 
-                <img src="img/card1.png" alt="" class="imagem">
-                <div class="remover">Remover Item</div>
-            </div>
-            <div class="div-itens2"> 
-                <div class="descricao-produto"> 
-                Vestido verde florido 
-                </div>                
-            </div>
-            <div class="div-itens3">
-                <div class="descricao-produto"> 
-                    <p class="price"> R$ 199,90 ou  </p>
-                    <p class="parcelas">
-                        3x R$ 66,63 </p>  
-                    </div>    
-            </div>
-
+        <div class="icons d-flex">
+          <a href="#" class="icon">
+            <i class="bx bx-user"></i>
+          </a>
+          <div class="icon">
+            <i class="bx bx-search"></i>
+          </div>
+          <a href="carrinho.html" class="icon">
+            <i class="bx bx-shopping-bag"></i>
+            <span class="d-flex">0</span>
+          </a>
         </div>
-            <div class="itens">
-                <img src="img/card2.png" alt="" class="imagem">
+        <div class="hamburger">
+          <i class="bx bx-menu-alt-left"></i>
+        </div>
+      </div>
+    </div>
 
-                <p class="descricao-produto"> 
-                    Calça branca
-                </p>
-
-                <p class="descricao-produto"> R$ 219.90 ou 
-                    <span class="parcelas"> 3x R$ 73.30 </span> 
-                </p>
+    <!-- cart -->
+    <div class="container cart">
+      <table>
+        <tr>
+          <th>Produtos</th>
+          <th>Quantidade</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="./img/product3.png" alt="Vestido verde florido" />
+              <div>
+                <p>Vestido Verde Florido</p>
+                <span> Preço: R$ 50,00 </span> <br />
+                <a href="#">remover</a>
+              </div>
             </div>
-            <p class="remover">Remover Item</p>
-
-            <div class="itens">
-                <img src="img/card11.png" alt="" class="imagem">
-                <p class="descricao-produto"> 
-                    Tênis preto
-                </p>
-
-                <p class="descricao-produto"> 
-                    R$ 69.90 ou <span class="parcelas">
-                        2x R$ 34.95 </span>
-                </p>
+          </td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td>R$ 50,00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="./img/product2.png" alt="Tênis azul marinho" />
+              <div>
+                <p>Tênis Azul Marinho</p>
+                <span>Preço: R$ 90,00</span> <br />
+                <a href="#">remover</a>
+              </div>
             </div>
-            <p class="remover">Remover Item</p>
-
-            <div class="itens">
-                <img src="img/card10.png" alt="" class="imagem">
-                <p class="descricao-produto"> 
-                    Tênis preto
-                </p>
-
-                <p class="descricao-produto">
-                    R$ 59.90 ou <span class="parcelas">
-                        1x 59.90</span>
-                </p>
-
+          </td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td>R$ 90,00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="./img/product1.png" alt="" />
+              <div>
+                <p>Tênis Preto</p>
+                <span>Preço: R$ 60,00</span> <br />
+                <a href="#">remover</a>
+              </div>
             </div>
-            <p class="remover">Remover Item</p>
+          </td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td>R$ 60,00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="./img/product-5.jpg" alt="Calça branca" />
+              <div>
+                <p>Calça Branca</p>
+                <span>Preço: R$ 60,00</span> <br />
+                <a href="#">remover</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td>R$ 60,00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="./img/product-2.jpg" alt="Camiseta verde-água" />
+              <div>
+                <p>Camiseta Verde</p>
+                <span>Preço: R$ 60,00</span> <br />
+                <a href="#">remover</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td>R$ 60,00</td>
+        </tr>
+      </table>
+      <div class="total-price">
+        <table>
+          <tr>
+            <td id="palavratotal">Total</td>
+            <td>R$ 250</td>
+          </tr>
+        </table>
+        <a href="./checkout.html" class="checkout btn"> Finalizar pedido</a>
+      </div>
+    </div>
 
-        </article>
-    
-        <section class="subtotal">
-            <h2 id="textosubtotal"> Sacola (4) </h2>
-        </section>
-    </main>
-</body>
-<script src="https://kit.fontawesome.com/93c4210ca3.js" crossorigin="anonymous"></script>
-
+    <!-- footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col">
+          <h4>INFORMAÇÃO</h4>
+          <a>Sobre</a>
+          <a>Contato</a>
+          <a>Termos & Condições</a>
+          <a>Tipos de envio</a>
+        </div>
+        <div class="col">
+          <h4>LINKS ÚTEIS</h4>
+          <a>Loja online</a>
+          <a>Atendimento ao cliente</a>
+          <a>Promoções</a>
+          <a>Marcas</a>
+        </div>
+        <div class="col">
+          <h4>COMUNIDADES</h4>
+          <a>Desenvolvedores</a>
+          <a>Investidores</a>
+          <a> Fornecedores</a>
+        </div>
+        <div class="social-net">
+          <i class="bx bxl-facebook-circle bx-md"></i>
+          <i class="bx bxl-twitter bx-md"></i>
+          <i class="bx bxl-instagram bx-md"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

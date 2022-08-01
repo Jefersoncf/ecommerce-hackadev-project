@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/cadastro.css" />
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Cadastro Cliente</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header container-card">
+        <i class="fa-solid fa-users"></i>
+        <span>Tipo de cadastro</span>
+        <hr />
+      </div>
+      <form class="form" action="#">
+        <div class="data-personal container-card">
+          <i class="fa-solid fa-list"></i>
+          <span>Dados Pessoais</span>
+          <hr />
+          <div class="row">
+            <label for="nomeResponsavel"><b>Nome do responsável</b></label>
+            <input
+              class="input-user"
+              type="text"
+              id="nomeResponsavel"
+              required
+            />
+          </div>
+          <br />
+          <div class="row">
+            <label for="cnpj"><b>CNPJ</b></label>
+            <input class="input-user" type="text" id="cnpj" required />
+          </div>
+          <br />
+          <div class="row">
+            <label for="razaoSocial"><b>Razão Social</b></label>
+            <input class="input-user" type="text" id="razaoSocial" required />
+          </div>
+          <br />
+          <div class="row">
+            <label for="inscricaoEstadual">Inscrição Estadual</label>
+            <input class="input-user" type="text" id="inscricaoEstadual" />
+          </div>
+          <br />
+          <div class="row">
+            <label for="celular">Celular</label>
+            <input class="input-user" type="text" id="celular" />
+          </div>
+          <br />
+          <div class="row">
+            <label for="telefoneFixo">Telefone fixo</label>
+            <input class="input-user" type="text" id="telefoneFixo" />
+          </div>
+          <br />
+          <div class="row">
+            <label for="vendedor">Nome do vendedor</label>
+            <input class="input-user" type="text" id="vendedor" />
+          </div>
+        </div>
+        <div class="address container-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Endereço</span>
+          <hr />
+          <div class="row">
+            <label for="cep"><b> CEP</b></label>
+            <input class="input-user" type="text" id="cep" required />
+          </div>
+          <br />
+          <div class="row">
+            <label for="endereco"><b>Endereço</b></label>
+            <input class="input-user" type="text" id="endereco" required />
+          </div>
+          <br />
+          <div class="row">
+            <label for="numero"><b>Número</b></label>
+            <input class="input-user" type="text" id="numero" required />
+          </div>
+          <br />
+          <div class="row">
+            <label for="complemento">Complemento</label>
+            <input class="input-user" type="text" id="complemento" />
+          </div>
+          <br />
+          <div class="row">
+            <label for="referencia">Referência</label>
+            <input class="input-user" type="text" id="referencia" />
+          </div>
+          <br />
+          <div class="row">
+            <label for="bairro"><b>Bairro</b></label>
+            <input class="input-user" type="text" id="bairro" required />
+          </div>
+          <br />
+          <div class="row">
+            <label for="cidade"><b>Cidade</b></label>
+            <input class="input-user" type="text" id="cidade" required />
+          </div>
+          <br />
+          <div class="row">
+            <label for="estado"><b>Estado</b></label>
+            <select id="estado" required>
+              <option value="SL">Selecione uma opção</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+              <option value="EX">Estrangeiro</option>
+            </select>
+          </div>
+        </div>
+        <div class="footer">
+          <input class="btn" type="submit" value="Cancelar" />
+          <input class="btn btn-vd" type="submit" value="Criar Conta" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
