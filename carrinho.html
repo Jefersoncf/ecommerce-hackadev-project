@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="/src/css/cart.css" />
     <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -39,7 +39,7 @@
             <a href="#" class="nav-link">T&C</a>
           </li>
           <li class="icons d-flex">
-            <a href="#" class="icon">
+            <a href="cadastro.html" class="icon">
               <i class="bx bx-user"></i>
             </a>
             <div class="icon">
@@ -53,7 +53,7 @@
         </ul>
 
         <div class="icons d-flex">
-          <a href="#" class="icon">
+          <a href="cadastro.html" class="icon">
             <i class="bx bx-user"></i>
           </a>
           <div class="icon">
@@ -65,7 +65,7 @@
           </a>
         </div>
         <div class="hamburger">
-          <i class="bx bx-menu-alt-left"></i>
+          <i class='bx bx-menu' ></i>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@
         <tr>
           <td>
             <div class="cart-info">
-              <img src="./img/product3.png" alt="Vestido verde florido" />
+              <img src="./src/img/product1.png" alt="Vestido verde florido" />
               <div>
                 <p>Vestido Verde Florido</p>
                 <span> Preço: R$ 50,00 </span> <br />
@@ -95,7 +95,7 @@
         <tr>
           <td>
             <div class="cart-info">
-              <img src="./img/product2.png" alt="Tênis azul marinho" />
+              <img src="./src/img/product5.png" alt="Tênis azul marinho" />
               <div>
                 <p>Tênis Azul Marinho</p>
                 <span>Preço: R$ 90,00</span> <br />
@@ -109,9 +109,23 @@
         <tr>
           <td>
             <div class="cart-info">
-              <img src="./img/product1.png" alt="" />
+              <img src="./src/img/product7.png" alt="" />
               <div>
                 <p>Tênis Preto</p>
+                <span>Preço: R$ 120,00</span> <br />
+                <a href="#">remover</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td>R$ 120,00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="./src/img/product9.png" alt="Calça branca" />
+              <div>
+                <p>Camisa Social</p>
                 <span>Preço: R$ 60,00</span> <br />
                 <a href="#">remover</a>
               </div>
@@ -123,30 +137,16 @@
         <tr>
           <td>
             <div class="cart-info">
-              <img src="./img/product-5.jpg" alt="Calça branca" />
+              <img src="./src/img/product2.png" alt="Camiseta verde-água" />
               <div>
-                <p>Calça Branca</p>
-                <span>Preço: R$ 60,00</span> <br />
+                <p>Moleton</p>
+                <span>Preço: R$ 79,90</span> <br />
                 <a href="#">remover</a>
               </div>
             </div>
           </td>
           <td><input type="number" value="1" min="1" /></td>
-          <td>R$ 60,00</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="cart-info">
-              <img src="./img/product-2.jpg" alt="Camiseta verde-água" />
-              <div>
-                <p>Camiseta Verde</p>
-                <span>Preço: R$ 60,00</span> <br />
-                <a href="#">remover</a>
-              </div>
-            </div>
-          </td>
-          <td><input type="number" value="1" min="1" /></td>
-          <td>R$ 60,00</td>
+          <td>R$ 79,90</td>
         </tr>
       </table>
       <div class="total-price">
@@ -156,7 +156,7 @@
             <td>R$ 250</td>
           </tr>
         </table>
-        <a href="./checkout.html" class="checkout btn"> Finalizar pedido</a>
+        <a href="checkout.html" class="checkout btn"> Fazer pedido</a>
       </div>
     </div>
 
@@ -191,4 +191,5 @@
       </div>
     </footer>
   </body>
+  <script src="./src/js/index.js"></script>
 </html>

@@ -76,24 +76,6 @@ input::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* Custom scrollbar style */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(0, 0%, 80%);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(0, 0%, 70%);
-}
-
 /* MAIN CONTAINER */
 .container {
   max-width: 1440px;
