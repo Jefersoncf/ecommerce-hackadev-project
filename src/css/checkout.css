@@ -1,11 +1,10 @@
 :root {
-  /* Colors */
-  --black-b: #595959;
-  --black: #333;
+  --black-b: #222;
+  --black-p: #030508;
   --green: #32a836;
   --white: #ffffff;
   --liner-trace: #e6e6e6;
-  --red: #ff0000;
+  --red: #e41d45;
   --liner-b: #999999;
 
   /* Typography */
@@ -28,16 +27,25 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
-  font-family: "Source Sans 3", sans-serif;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--white);
+  color: var(--black-b);
+  font-weight: 400;
+  font-style: normal;
+}
+
 a {
-  color: inherit;
+  color: var(--black-b);
   text-decoration: none;
 }
 
@@ -48,7 +56,8 @@ button {
   cursor: pointer;
 }
 
-ion-icon,
+/* ion-icon, */
+i,
 span {
   display: inline-block;
 }
@@ -76,11 +85,117 @@ input::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* MAIN CONTAINER */
+li {
+  list-style: none;
+}
+/* Navigation*/
+.navigation {
+  height: 6rem;
+  line-height: 6rem;
+  margin-bottom: 100px;
+}
 .container {
-  max-width: 1440px;
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0 3rem;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.nav-center {
+  justify-content: space-between;
+}
+.logo {
+  font-size: 2rem;
+}
+.nav-list .icons {
+  display: none;
+}
+.nav-center .nav-item:not(:last-child) {
+  margin-right: 2rem;
+}
+.nav-center .nav-link {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.nav-center .nav-link:hover {
+  color: var(--black-p);
+}
+.nav-center .hamburger {
+  display: none;
+  font-size: 2.3rem;
+  color: var(--black-b);
+  cursor: pointer;
+}
+/* Icons */
+.icon {
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 0 1rem;
+  color: #555;
+  position: relative;
+}
+.icon:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.icon span {
+  position: absolute;
+  top: 3px;
+  right: -3px;
+  background-color: var(--black-p);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  height: 2rem;
+  width: 2rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-list {
+    position: fixed;
+    top: 12%;
+    left: -35rem;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
+    height: 100%;
+    width: 0%;
+    max-width: 35rem;
+    z-index: 100;
+    transition: all 300ms ease-in-out;
+  }
+  .nav-list.open {
+    left: 0;
+    width: 100%;
+  }
+  .nav-list .nav-item {
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+  .nav-list .nav-link {
+    font-size: 2rem;
+    color: var(--black-b);
+  }
+  .nav-center .hamburger {
+    display: block;
+    color: var(--black-b);
+    font-size: 3rem;
+  }
+  .icons {
+    display: none;
+  }
+  .nav-list .icons {
+    display: flex;
+  }
+}
+
+/* MAIN CONTAINER */
+.main-container {
   min-height: 100vh;
-  margin: auto;
   display: flex;
   flex-direction: column;
 }
@@ -88,15 +203,14 @@ input::-webkit-outer-spin-button {
 .heading {
   font-size: var(--fs-28);
   font-weight: var(--fw-6);
-  color: var(--black);
+  color: var(--black-p);
   border-bottom: 1px solid var(--liner-trace);
   padding: 20px var(--px);
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
-.heading ion-icon {
+.heading i {
   font-size: 40px;
 }
 
@@ -113,7 +227,7 @@ input::-webkit-outer-spin-button {
 }
 
 .section-heading {
-  color: var(--black);
+  color: var(--black-p);
   margin-bottom: 30px;
   font-size: var(--fs-24);
   font-weight: var(--fw-5);
@@ -145,17 +259,22 @@ input::-webkit-outer-spin-button {
   border-color: var(--green);
 }
 
-.payment-method .method ion-icon {
+.payment-method .method i {
   font-size: 20px;
 }
 
-.payment-method .method .checkmark {
+.payment-method .method .bx {
   margin-left: auto;
   color: var(--liner-b);
 }
 
 .payment-method .method .fill {
   color: var(--green);
+}
+
+.payment-method .method .bx-m {
+  margin-left: 0;
+  color: var(--black-b);
 }
 
 .method .pac-desc {
@@ -166,7 +285,7 @@ input::-webkit-outer-spin-button {
   padding-left: 10px;
   margin-bottom: 5px;
   font-size: var(--fs-14);
-  color: var(--black);
+  color: var(--black-p);
 }
 
 .input-default {
@@ -204,7 +323,7 @@ input::-webkit-outer-spin-button {
 }
 
 .expire-date .input-flex {
-  color: var(--black);
+  color: var(--black-p);
   gap: 13px;
 }
 
@@ -260,7 +379,7 @@ input::-webkit-outer-spin-button {
 .card .detail .product-name {
   font-weight: var(--fw-6);
   font-size: var(--fs-15);
-  color: var(--black);
+  color: var(--black-p);
   margin-bottom: 10px;
 }
 
@@ -277,21 +396,21 @@ input::-webkit-outer-spin-button {
 
 .product-qty button {
   background: hsl(0, 0%, 91%);
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .product-qty button:active,
-.product-close-btn:active ion-icon {
+.product-close-btn:active i {
   transform: scale(0.95);
 }
 
-.product-qty button ion-icon {
-  --ionicon-stroke-width: 60px;
-  font-size: 10px;
+.product-qty button i {
+  /* --ionicon-stroke-width: 60px; */
+  font-size: 20px;
 }
 
 .product-close-btn {
@@ -300,12 +419,12 @@ input::-webkit-outer-spin-button {
   right: 0;
 }
 
-.product-close-btn ion-icon {
-  font-size: 25px;
+.product-close-btn i {
+  font-size: 28px;
   color: var(--liner-b);
 }
 
-.product-close-btn:hover ion-icon {
+.product-close-btn:hover i {
   color: var(--red);
 }
 
@@ -355,7 +474,7 @@ input::-webkit-outer-spin-button {
 .amount .total {
   font-size: var(--fs-18);
   font-weight: var(--fw-7);
-  color: var(--black);
+  color: var(--black-p);
 }
 
 /* RESPONSIVE */
@@ -457,7 +576,7 @@ footer .row {
 .footer .col {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: var(--white);
   align-items: flex-start;
 }
 
@@ -469,12 +588,12 @@ footer .row {
 .footer .col:last-child span {
   font-size: 2.5rem;
   margin-right: 0.5rem;
-  color: white;
+  color: var(--white);
 }
 
 .footer .col a {
   cursor: pointer;
-  color: white;
+  color: var(--white);
   font-size: 19px;
   padding: 0.5rem;
   font-weight: 300;
@@ -493,18 +612,18 @@ footer .row {
   transition: all 300ms ease;
 }
 
-.rede-sociais {
+.social-net {
   display: flex;
-  color: white;
+  color: var(--white);
 }
 
-.rede-sociais i {
+.social-net i {
   margin: 0 20px;
   font-size: 1.7rem;
   transition: all 300ms ease;
 }
 
-.rede-sociais i:hover {
+.social-net i:hover {
   color: #919496;
   cursor: pointer;
 }
