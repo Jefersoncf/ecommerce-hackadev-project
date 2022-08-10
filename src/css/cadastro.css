@@ -166,7 +166,7 @@ hr {
   grid-template-areas: "data-personal address";
 }
 
-.footer {
+.btn-bottom {
   grid-area: footer;
   display: flex;
   justify-content: end;
@@ -179,7 +179,7 @@ hr {
   margin: 0 auto;
   grid-template-columns: 100%;
   grid-template-rows: 150px 600px 150px;
-  grid-template-areas: "header" "form" "footer";
+  grid-template-areas: "header" "form" "btn-bottom";
 }
 
 .container-card {
@@ -191,7 +191,7 @@ hr {
   transition: all 0.3s ease-out;
 }
 
-.row {
+.row-input {
   display: grid;
   grid-template-columns: 30% 45% 20%;
   column-gap: 5%;
@@ -257,7 +257,7 @@ input:focus {
     grid-template-areas: "data-personal" "address";
   }
 
-  .footer {
+  .btn-bottom {
     display: flex;
     justify-content: end;
     width: 0;
@@ -277,5 +277,80 @@ input:focus {
   .form {
     grid-template-columns: 100%;
     grid-template-areas: "data-personal" "address";
+  }
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  padding: 80px 30px;
+  background-color: var(--black-p);
+}
+footer .row {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 99.6rem;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.footer .col {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  align-items: flex-start;
+}
+.footer .col:last-child {
+  flex-direction: row;
+  justify-content: center;
+}
+.footer .col a {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 19px;
+  padding: 0.5rem;
+  font-weight: 300;
+}
+.footer .col h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.social-net {
+  display: flex;
+  color: var(--white);
+}
+.social-net i {
+  margin: 0 20px;
+  font-size: 1.7rem;
+  transition: all 300ms ease;
+}
+.social-net i:hover {
+  color: #919496;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 567px) {
+  .footer {
+    padding: 20px 0 10px 10px;
+    background-color: var(--black-p);
+    font-size: 12px;
+  }
+  .footer .col h4 {
+    margin-bottom: 0.5rem;
+  }
+  .footer .col a {
+    font-size: 12px;
+    padding: 0rem;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+  .footer .col a:last-child {
+    margin-bottom: 20px;
+  }
+  footer .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .social-net i {
+    margin: 0 20px;
   }
 }

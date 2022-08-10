@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Cadastro Cliente</title>
+    <title>DevModas | Cadastro</title>
   </head>
   <body>
     <!-- header -->
@@ -83,7 +83,7 @@
           <i class="bx bx-list-ul bx-md"></i>
           <span>Dados Pessoais</span>
           <hr />
-          <div class="row">
+          <div class="row-input">
             <label for="nomeResponsavel"><b>Nome do responsável</b></label>
             <input
               class="input-user"
@@ -93,32 +93,32 @@
             />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="cnpj"><b>CNPJ</b></label>
             <input class="input-user" type="text" id="cnpj" required />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="razaoSocial"><b>Razão Social</b></label>
             <input class="input-user" type="text" id="razaoSocial" required />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="inscricaoEstadual">Inscrição Estadual</label>
             <input class="input-user" type="text" id="inscricaoEstadual" />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="celular">Celular</label>
             <input class="input-user" type="text" id="celular" />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="telefoneFixo">Telefone fixo</label>
             <input class="input-user" type="text" id="telefoneFixo" />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="vendedor">Nome do vendedor</label>
             <input class="input-user" type="text" id="vendedor" />
           </div>
@@ -127,42 +127,42 @@
           <i class="bx bxs-map bx-md"></i>
           <span>Endereço</span>
           <hr />
-          <div class="row">
+          <div class="row-input">
             <label for="cep"><b> CEP</b></label>
             <input class="input-user" type="text" id="cep" required />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="endereco"><b>Endereço</b></label>
             <input class="input-user" type="text" id="endereco" required />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="numero"><b>Número</b></label>
             <input class="input-user" type="text" id="numero" required />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="complemento">Complemento</label>
             <input class="input-user" type="text" id="complemento" />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="referencia">Referência</label>
             <input class="input-user" type="text" id="referencia" />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="bairro"><b>Bairro</b></label>
             <input class="input-user" type="text" id="bairro" required />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="cidade"><b>Cidade</b></label>
             <input class="input-user" type="text" id="cidade" required />
           </div>
           <br />
-          <div class="row">
+          <div class="row-input">
             <label for="estado"><b>Estado</b></label>
             <select id="estado" required>
               <option value="SL">Selecione uma opção</option>
@@ -197,12 +197,44 @@
             </select>
           </div>
         </div>
-        <div class="footer">
+        <div class="btn-bottom">
           <input class="btn" type="submit" value="Cancelar" />
           <input class="btn btn-vd" type="submit" value="Criar Conta" />
         </div>
       </form>
     </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col">
+          <h4>INFORMAÇÃO</h4>
+          <a>Sobre</a>
+          <a>Contato</a>
+          <a>Termos & Condições</a>
+          <a>Tipos de envio</a>
+        </div>
+        <div class="col">
+          <h4>LINKS ÚTEIS</h4>
+          <a>Loja online</a>
+          <a>Atendimento ao cliente</a>
+          <a>Promoções</a>
+          <a>Marcas</a>
+        </div>
+        <div class="col">
+          <h4>COMUNIDADES</h4>
+          <a>Desenvolvedores</a>
+          <a>Investidores</a>
+          <a> Fornecedores</a>
+        </div>
+        <div class="social-net">
+          <i class="bx bxl-facebook-circle bx-md"></i>
+          <i class="bx bxl-twitter bx-md"></i>
+          <i class="bx bxl-instagram bx-md"></i>
+        </div>
+      </div>
+    </footer>
+
   </body>
   <script src="./src/js/index.js"></script>
 </html>
