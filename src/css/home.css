@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --white: #fff;
   --black-b: #222;
@@ -51,19 +46,6 @@ li {
   min-height: 100vh;
   overflow-x: hidden;
 }
-.top-nav {
-  background-color: var(--black-p);
-  font-size: 1.3rem;
-  color: var(--white);
-}
-.top-nav div {
-  justify-content: space-between;
-  height: 4.5rem;
-}
-.top-nav a {
-  color: var(--white);
-  padding: 0 0.5rem;
-}
 /* Navigation*/
 .navigation {
   height: 6rem;
@@ -84,6 +66,7 @@ li {
 }
 .nav-center .nav-link:hover {
   color: var(--black-p);
+  text-decoration: underline;
 }
 .nav-center .hamburger {
   display: none;
@@ -123,7 +106,7 @@ li {
     flex-direction: column;
     align-items: flex-start;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: var(--white)
+    background-color: var(--white);
     height: 100%;
     width: 0%;
     max-width: 35rem;
@@ -200,7 +183,7 @@ li {
   font-size: 1.6rem;
   margin-top: 1rem;
   background-color: var(--black-p);
-  color: var(--white)
+  color: var(--white);
 }
 .hero .right {
   flex: 0 0 50%;
@@ -244,7 +227,7 @@ li {
     top: 15%;
   }
   .center .right img.img1 {
-    width: 90%;
+    width: 200%;
   }
   .center .right img.img2 {
     width: 100%;
@@ -253,7 +236,7 @@ li {
 
 @media only screen and (max-width: 567px) {
   .center .right img.img1 {
-    width: 30rem;
+    width: 39rem;
   }
   .center .right img.img2 {
     width: 33rem;
@@ -411,6 +394,15 @@ li {
 .product-info a:hover {
   color: var(--black-p);
 }
+
+/* teste */
+.product-info p {
+  color: var(--black-b);
+  text-decoration: line-through;
+  font-size: 12px;
+}
+/* teste */
+
 .product-item .icons {
   position: absolute;
   left: 50%;

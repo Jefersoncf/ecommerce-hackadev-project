@@ -1,8 +1,10 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
-
 :root {
   --white: #fff;
   --black-b: #222;
@@ -11,7 +13,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 65.5%;
+  font-size: 62.5%;
 }
 
 body {
@@ -22,20 +24,23 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
-/* Navigation*/
-
-.navigation {
-  height: 7rem;
-  line-height: 6rem;
-  margin-bottom: 31px;
-  background-color: white;
+a {
+  text-decoration: none;
+  color: var(--black-b);
+}
+li {
+  list-style: none;
 }
 
+/* Navigation*/
+.navigation {
+  height: 6rem;
+  line-height: 6rem;
+}
 .container {
   max-width: 114rem;
   margin: 0 auto;
-  margin-top: 0px;
+  margin-top: 30px;
   padding: 0 3rem;
 }
 
@@ -53,16 +58,17 @@ body {
 }
 
 .nav-center .nav-item:not(:last-child) {
-  margin-right: 2rem;
+  margin-right: 0.5rem;
 }
 
 .nav-center .nav-link {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   padding: 1rem;
 }
 
 .nav-center .nav-link:hover {
   color: var(--black-p);
+  text-decoration: underline;
 }
 
 .nav-center .hamburger {
@@ -138,21 +144,10 @@ body {
   .icons {
     display: none;
   }
-  .logo {
-    font-size: 2rem;
-  }
 
   .nav-list .icons {
     display: flex;
   }
-}
-
-a {
-  text-decoration: none;
-  color: var(--black-b);
-}
-li {
-  list-style: none;
 }
 
 .text {

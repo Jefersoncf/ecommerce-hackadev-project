@@ -35,7 +35,6 @@ li {
 .navigation {
   height: 6rem;
   line-height: 6rem;
-  margin-bottom: 100px;
 }
 .container {
   max-width: 114rem;
@@ -50,9 +49,6 @@ li {
 .nav-center {
   justify-content: space-between;
 }
-.logo {
-  font-size: 2rem;
-}
 .nav-list .icons {
   display: none;
 }
@@ -60,11 +56,12 @@ li {
   margin-right: 2rem;
 }
 .nav-center .nav-link {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding: 1rem;
 }
 .nav-center .nav-link:hover {
   color: var(--black-p);
+  text-decoration: underline;
 }
 .nav-center .hamburger {
   display: none;
